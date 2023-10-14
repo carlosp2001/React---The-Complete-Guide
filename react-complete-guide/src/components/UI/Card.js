@@ -1,6 +1,6 @@
 import './Card.css'
 
-function Card(props) {
+const Card = (props) => {
   // Los elementos personalizados no soportan className debemos asignar manualmente las clases
   // con el metodo props.className
   const classes = 'card ' + props.className;
