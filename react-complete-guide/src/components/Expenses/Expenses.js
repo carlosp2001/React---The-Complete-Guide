@@ -5,6 +5,7 @@ import Card from "../UI/Card";
 import "./Expenses.css";
 import ExpensesFilter from "./ExpensesFilter";
 import ExpensesList from "./ExpensesList";
+import ExpensesChart from "./ExpensesChart";
 
 const Expenses = ({ items: expenses }) => {
   const [filteredYear, setFilteredYear] = useState("2020");
@@ -26,6 +27,7 @@ const Expenses = ({ items: expenses }) => {
           onChangeFilter={filterChangeHandler}
           selected={filteredYear}
         />
+        <ExpensesChart expenses={filteredExpenses}/>
         <ExpensesList items={filteredExpenses}/>
         {/*{expensesContent}*/}
         {/*Manera de hacerlo condicionales dentro del render*/}
